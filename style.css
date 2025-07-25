@@ -1,0 +1,162 @@
+body {
+  margin: 0;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+  color: #ffffff;
+  text-align: center;
+}
+
+.container {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 48px;
+  font-weight: bold;
+  color: #4dabf7;
+  margin: 0;
+}
+
+.score-container {
+  background-color: #2196f3;
+  padding: 15px 25px;
+  border-radius: 8px;
+  color: white;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.score-title {
+  font-size: 14px;
+  text-transform: uppercase;
+  margin: 0;
+  margin-bottom: 8px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+#score {
+  font-size: 28px;
+  font-weight: bold;
+  margin: 0;
+}
+
+#result {
+  font-size: 16px;
+  margin-bottom: 20px;
+  height: 20px;
+  color: #00bbf9;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 12px;
+  background-color: #000000;
+  border-radius: 8px;
+  padding: 15px;
+  width: 400px;
+  height: 400px;
+  margin: 0 auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.grid div {
+  background-color: #16213e;
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+  font-weight: bold;
+  color: #ffffff;
+  transition: all 0.15s ease-in-out;
+  border: 1px solid #2196f3;
+}
+
+/* Tile colors based on values - Blue and Black theme */
+.grid div:not(:empty) {
+  background-color: #1565c0;
+}
+
+.grid div[innerHTML="2"] {
+  background-color: #42a5f5;
+  color: #000000;
+}
+
+.grid div[innerHTML="4"] {
+  background-color: #2196f3;
+  color: #000000;
+}
+
+.grid div[innerHTML="8"] {
+  background-color: #1976d2;
+  color: #ffffff;
+}
+
+.grid div[innerHTML="16"] {
+  background-color: #1565c0;
+  color: #ffffff;
+}
+
+.grid div[innerHTML="32"] {
+  background-color: #0d47a1;
+  color: #ffffff;
+}
+
+.grid div[innerHTML="64"] {
+  background-color: #0a3d91;
+  color: #ffffff;
+}
+
+.grid div[innerHTML="128"] {
+  background-color: #083481;
+  color: #ffffff;
+  font-size: 28px;
+}
+
+.grid div[innerHTML="256"] {
+  background-color: #062a71;
+  color: #ffffff;
+  font-size: 28px;
+}
+
+.grid div[innerHTML="512"] {
+  background-color: #042061;
+  color: #ffffff;
+  font-size: 28px;
+}
+
+.grid div[innerHTML="1024"] {
+  background-color: #021651;
+  color: #ffffff;
+  font-size: 24px;
+}
+
+.grid div[innerHTML="2048"] {
+  background-color: #000000;
+  color: #4dabf7;
+  font-size: 24px;
+  box-shadow: 0 0 20px rgba(77, 171, 247, 0.8);
+  border: 2px solid #4dabf7;
+}
+
+/* Hide zeros */
+.grid div:contains("0") {
+  color: transparent;
+}
+
+/* Hover effects for better visual feedback */
+.grid div:hover {
+  transform: scale(1.05);
+}
